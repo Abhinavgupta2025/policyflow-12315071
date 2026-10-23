@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrippersShield - Travel Insurance</title>
-    <!-- Editorial Luxury Typography: Playfair Display + Cormorant Garamond + Plus Jakarta Sans -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -39,7 +39,7 @@
             padding-bottom: 60px;
         }
 
-        /* Editorial Header */
+        
         header {
             background: #ffffff;
             border-bottom: 1px solid var(--luxury-border);
@@ -96,14 +96,14 @@
             color: white;
         }
 
-        /* Page Container */
+        
         .page-container {
             max-width: 1040px;
             margin: 40px auto;
             padding: 0 24px;
         }
 
-        /* Editorial Main Card */
+        
         .editorial-card {
             background: var(--luxury-card);
             border: 1px solid var(--luxury-border);
@@ -149,7 +149,7 @@
             line-height: 1.6;
         }
 
-        /* Form Controls */
+        
         .form-grid {
             display: flex;
             flex-direction: column;
@@ -183,7 +183,7 @@
             box-shadow: 0 0 0 1px var(--luxury-dark);
         }
 
-        /* Destination Pills */
+        
         .pills-container {
             display: flex;
             flex-wrap: wrap;
@@ -217,7 +217,7 @@
             font-weight: 600;
         }
 
-        /* Columns */
+        
         .two-cols {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -257,7 +257,7 @@
             background: #2b2d35;
         }
 
-        /* Plans Section */
+        
         .plans-card {
             display: none;
             background: var(--luxury-card);
@@ -384,7 +384,7 @@
             padding-top: 14px;
         }
 
-        /* Formula Card */
+        
         .formula-card {
             background: #fafaf9;
             border: 1px solid var(--luxury-border);
@@ -406,7 +406,7 @@
             display: block;
         }
 
-        /* Sandbox */
+        
         .sandbox-box {
             background: #f7f6f4;
             border: 1px solid #ded9d1;
@@ -444,7 +444,7 @@
         .btn-outline { background: white; color: var(--luxury-dark); }
         .btn-outline:hover { background: #f1f0ee; }
 
-        /* Status & Timeline */
+        
         .status-card {
             display: none;
             background: var(--luxury-card);
@@ -498,7 +498,7 @@
             border: 2px solid #ffffff;
         }
 
-        /* Requests Table */
+        
         .table-card {
             background: var(--luxury-card);
             border: 1px solid var(--luxury-border);
@@ -552,7 +552,7 @@
 </head>
 <body>
 
-    <!-- Header -->
+    
     <header>
         <a href="/" class="brand-link">
             <div class="brand-logo-text">TRIPPERSSHIELD</div>
@@ -565,7 +565,7 @@
 
     <div class="page-container">
 
-        <!-- Editorial Hero & Intake Form -->
+        
         <section class="editorial-card">
             <span class="eyebrow-text">TrippersShield • Fictional Distribution Engine</span>
             <h1 class="display-title">
@@ -577,7 +577,7 @@
             </p>
 
             <div class="form-grid">
-                <!-- Destination -->
+                
                 <div>
                     <label class="field-label" for="destinationInput">Destination Country</label>
                     <input type="text" id="destinationInput" class="text-input" value="United Kingdom" oninput="updateDestinationType()">
@@ -592,7 +592,7 @@
                     </div>
                 </div>
 
-                <!-- Dates -->
+                
                 <div class="two-cols">
                     <div>
                         <label class="field-label" for="tripStart">Trip Start Date</label>
@@ -604,7 +604,7 @@
                     </div>
                 </div>
 
-                <!-- Traveller & Request Identification -->
+                
                 <div class="info-box">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
                         <span class="field-label" style="margin-bottom: 0;">Identification & Agent Credentials</span>
@@ -638,7 +638,7 @@
             </div>
         </section>
 
-        <!-- Plans & Pricing Comparison Card -->
+        
         <section class="plans-card" id="plansCard">
             <div class="plans-topbar">
                 <div>
@@ -655,7 +655,7 @@
                 </div>
             </div>
 
-            <!-- Plans Grid -->
+            
             <div class="plans-grid">
                 <div class="plan-item" id="planBoxBASIC" onclick="selectPlan('BASIC')">
                     <div class="plan-item-name">Basic</div>
@@ -691,7 +691,7 @@
                 </div>
             </div>
 
-            <!-- Pricing Breakdown -->
+            
             <div class="formula-card">
                 <div style="font-weight: 600; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #8c7851;">
                     Deterministic Pricing Snapshot
@@ -701,7 +701,7 @@
                 </code>
             </div>
 
-            <!-- Mock Insurer Testing Sandbox -->
+            
             <div class="sandbox-box">
                 <div class="sandbox-left">
                     <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap;">Scenario:</span>
@@ -722,7 +722,7 @@
             </div>
         </section>
 
-        <!-- Status & Audit Trail Card -->
+        
         <section class="status-card" id="statusCard">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--luxury-border);">
                 <div>
@@ -749,7 +749,7 @@
             </div>
         </section>
 
-        <!-- Requests Log Table -->
+        
         <section class="table-card" id="requestsTableSection">
             <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 18px;">
                 <div>
@@ -796,7 +796,7 @@
 
     </div>
 
-    <!-- Script -->
+    
     <script>
         let currentDestination = 'INTERNATIONAL';
         let currentPlan = 'PLUS';
