@@ -4,45 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrippersShield - Travel Insurance</title>
-    <!-- Modern Clean Font: Inter -->
+    <!-- Editorial Luxury Typography: Playfair Display + Cormorant Garamond + Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #0056d2;
-            --primary-hover: #0043a8;
-            --primary-light: #eff5ff;
-            --text-dark: #1e293b;
-            --text-muted: #64748b;
-            --border: #e2e8f0;
-            --bg: #f8fafc;
-            --card-bg: #ffffff;
-            --radius-lg: 14px;
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-serif-sub: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            
+            --luxury-dark: #121316;
+            --luxury-card: #ffffff;
+            --luxury-bg: #f7f6f4;
+            --luxury-accent: #1e3a8a;
+            --luxury-gold: #c5a880;
+            --luxury-muted: #6b7280;
+            --luxury-border: #e7e5e0;
             --radius-md: 10px;
-            --radius-sm: 6px;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: var(--font-body);
             -webkit-font-smoothing: antialiased;
         }
 
         body {
-            background-color: var(--bg);
-            color: var(--text-dark);
+            background-color: var(--luxury-bg);
+            color: var(--luxury-dark);
             line-height: 1.5;
             padding-bottom: 60px;
         }
 
-        /* Simplified Header */
+        /* Editorial Header */
         header {
             background: #ffffff;
-            border-bottom: 1px solid var(--border);
-            padding: 16px 28px;
+            border-bottom: 1px solid var(--luxury-border);
+            padding: 20px 40px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -51,121 +52,135 @@
         .brand-link {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             text-decoration: none;
         }
 
-        .brand-logo-icon {
-            width: 34px;
-            height: 34px;
-            background: var(--primary);
-            color: white;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-        }
-
-        .brand-title {
-            font-size: 20px;
+        .brand-logo-text {
+            font-family: var(--font-display);
+            font-size: 22px;
             font-weight: 700;
-            color: var(--text-dark);
-            letter-spacing: -0.3px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--luxury-dark);
         }
 
-        .brand-title span {
-            color: var(--primary);
-        }
-
-        .header-actions {
-            display: flex;
-            gap: 12px;
-            align-items: center;
+        .header-tagline {
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--luxury-muted);
+            margin-left: 8px;
+            padding-left: 10px;
+            border-left: 1px solid var(--luxury-border);
         }
 
         .header-btn {
-            font-size: 13px;
-            font-weight: 500;
-            color: var(--text-muted);
+            font-family: var(--font-body);
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--luxury-dark);
             text-decoration: none;
-            padding: 8px 14px;
-            border-radius: var(--radius-sm);
-            border: 1px solid var(--border);
-            background: white;
+            padding: 9px 18px;
+            border-radius: 4px;
+            border: 1px solid var(--luxury-dark);
+            background: transparent;
             cursor: pointer;
-            transition: all 0.15s;
+            transition: all 0.2s;
         }
 
         .header-btn:hover {
-            color: var(--text-dark);
-            border-color: #cbd5e1;
+            background: var(--luxury-dark);
+            color: white;
         }
 
-        /* Main Container */
+        /* Page Container */
         .page-container {
-            max-width: 1080px;
-            margin: 36px auto;
-            padding: 0 20px;
+            max-width: 1040px;
+            margin: 40px auto;
+            padding: 0 24px;
         }
 
-        /* Simple Hero Card (Policybazaar Style, Cleaned Up) */
-        .main-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 32px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
-            margin-bottom: 28px;
+        /* Editorial Main Card */
+        .editorial-card {
+            background: var(--luxury-card);
+            border: 1px solid var(--luxury-border);
+            border-radius: var(--radius-md);
+            padding: 40px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.02);
+            margin-bottom: 32px;
         }
 
-        .card-header-simple {
-            margin-bottom: 24px;
-        }
-
-        .card-header-simple h1 {
-            font-size: 22px;
+        .eyebrow-text {
+            font-family: var(--font-body);
+            font-size: 11px;
             font-weight: 700;
-            color: var(--text-dark);
-            letter-spacing: -0.4px;
-            margin-bottom: 6px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: #8c7851;
+            margin-bottom: 12px;
+            display: block;
         }
 
-        .card-header-simple p {
+        .display-title {
+            font-family: var(--font-display);
+            font-size: 42px;
+            font-weight: 500;
+            color: var(--luxury-dark);
+            line-height: 1.18;
+            margin-bottom: 14px;
+            letter-spacing: -0.01em;
+        }
+
+        .display-title em {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-weight: 400;
+            color: #3b4252;
+        }
+
+        .display-desc {
             font-size: 14px;
-            color: var(--text-muted);
+            color: var(--luxury-muted);
+            max-width: 680px;
+            margin-bottom: 32px;
+            line-height: 1.6;
         }
 
         /* Form Controls */
         .form-grid {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 22px;
         }
 
         .field-label {
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 600;
-            color: var(--text-dark);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--luxury-dark);
             margin-bottom: 8px;
             display: block;
         }
 
         .text-input {
             width: 100%;
-            padding: 11px 14px;
+            padding: 12px 16px;
             font-size: 14px;
-            border: 1px solid var(--border);
-            border-radius: var(--radius-md);
+            border: 1px solid var(--luxury-border);
+            border-radius: 6px;
             outline: none;
             background: #ffffff;
-            color: var(--text-dark);
-            transition: border-color 0.15s, box-shadow 0.15s;
+            color: var(--luxury-dark);
+            transition: all 0.2s;
         }
 
         .text-input:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(0, 86, 210, 0.1);
+            border-color: var(--luxury-dark);
+            box-shadow: 0 0 0 1px var(--luxury-dark);
         }
 
         /* Destination Pills */
@@ -177,213 +192,229 @@
         }
 
         .pill-btn {
-            font-size: 13px;
+            font-family: var(--font-body);
+            font-size: 12px;
             font-weight: 500;
-            color: var(--text-muted);
-            background: #f1f5f9;
-            border: 1px solid transparent;
-            padding: 6px 14px;
+            color: var(--luxury-muted);
+            background: #f8fafc;
+            border: 1px solid var(--luxury-border);
+            padding: 7px 16px;
             border-radius: 20px;
             cursor: pointer;
-            transition: all 0.15s;
+            transition: all 0.2s;
             user-select: none;
         }
 
         .pill-btn:hover {
-            background: #e2e8f0;
-            color: var(--text-dark);
+            border-color: var(--luxury-dark);
+            color: var(--luxury-dark);
         }
 
         .pill-btn.active {
-            background: var(--primary-light);
-            border-color: #bfdbfe;
-            color: var(--primary);
+            background: var(--luxury-dark);
+            border-color: var(--luxury-dark);
+            color: #ffffff;
             font-weight: 600;
         }
 
-        /* Input Rows */
+        /* Columns */
         .two-cols {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 16px;
+            gap: 20px;
         }
 
         .four-cols {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 14px;
+            gap: 16px;
         }
 
         .info-box {
-            background: #f8fafc;
-            border: 1px solid var(--border);
-            border-radius: var(--radius-md);
-            padding: 16px;
+            background: #fafaf9;
+            border: 1px solid var(--luxury-border);
+            border-radius: 6px;
+            padding: 20px;
         }
 
-        .btn-primary-large {
+        .btn-luxury-action {
             width: 100%;
-            background: var(--primary);
+            background: var(--luxury-dark);
             color: white;
-            font-size: 15px;
+            font-family: var(--font-body);
+            font-size: 13px;
             font-weight: 600;
-            padding: 14px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 16px;
             border: none;
-            border-radius: var(--radius-md);
+            border-radius: 6px;
             cursor: pointer;
-            transition: background 0.15s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+            transition: all 0.2s;
         }
 
-        .btn-primary-large:hover {
-            background: var(--primary-hover);
+        .btn-luxury-action:hover {
+            background: #2b2d35;
         }
 
-        /* Plans Section (Clean & Simple) */
+        /* Plans Section */
         .plans-card {
             display: none;
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 28px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
-            margin-bottom: 28px;
+            background: var(--luxury-card);
+            border: 1px solid var(--luxury-border);
+            border-radius: var(--radius-md);
+            padding: 36px 40px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.02);
+            margin-bottom: 32px;
         }
 
         .plans-topbar {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid var(--border);
+            align-items: flex-end;
+            margin-bottom: 24px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--luxury-border);
+        }
+
+        .plans-title-serif {
+            font-family: var(--font-display);
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--luxury-dark);
+            margin-bottom: 4px;
         }
 
         .sum-buttons {
             display: flex;
-            gap: 6px;
+            gap: 8px;
         }
 
         .sum-btn {
+            font-family: var(--font-body);
             font-size: 12px;
-            font-weight: 500;
-            padding: 6px 12px;
-            border-radius: 6px;
-            border: 1px solid var(--border);
+            font-weight: 600;
+            padding: 7px 14px;
+            border-radius: 4px;
+            border: 1px solid var(--luxury-border);
             background: white;
-            color: var(--text-dark);
+            color: var(--luxury-dark);
             cursor: pointer;
-            transition: all 0.15s;
+            transition: all 0.2s;
         }
 
         .sum-btn.active {
-            background: var(--primary);
+            background: var(--luxury-dark);
             color: white;
-            border-color: var(--primary);
+            border-color: var(--luxury-dark);
         }
 
         .plans-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            margin-bottom: 24px;
+            gap: 20px;
+            margin-bottom: 28px;
         }
 
         .plan-item {
-            border: 1.5px solid var(--border);
-            border-radius: var(--radius-md);
-            padding: 20px;
+            border: 1px solid var(--luxury-border);
+            border-radius: 6px;
+            padding: 24px;
             cursor: pointer;
             position: relative;
             background: white;
-            transition: all 0.15s;
+            transition: all 0.2s;
         }
 
         .plan-item:hover {
-            border-color: #cbd5e1;
+            border-color: var(--luxury-dark);
         }
 
         .plan-item.selected {
-            border-color: var(--primary);
-            background: #fafcff;
-            box-shadow: 0 0 0 1px var(--primary);
+            border-color: var(--luxury-dark);
+            box-shadow: 0 0 0 1px var(--luxury-dark);
+            background: #fafaf9;
         }
 
         .plan-tag {
             position: absolute;
             top: -10px;
-            right: 14px;
-            background: #0284c7;
+            right: 16px;
+            background: #8c7851;
             color: white;
             font-size: 10px;
-            font-weight: 700;
-            padding: 2px 8px;
-            border-radius: 10px;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 4px;
         }
 
         .plan-item-name {
-            font-size: 16px;
-            font-weight: 700;
+            font-family: var(--font-display);
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
             margin-bottom: 4px;
         }
 
         .plan-item-rate {
             font-size: 12px;
-            color: var(--text-muted);
-            margin-bottom: 14px;
+            color: var(--luxury-muted);
+            margin-bottom: 16px;
         }
 
         .plan-item-price {
-            font-size: 26px;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 12px;
+            font-family: var(--font-display);
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--luxury-dark);
+            margin-bottom: 14px;
         }
 
         .plan-item-features {
             list-style: none;
             font-size: 12px;
-            color: var(--text-muted);
+            color: var(--luxury-muted);
             display: flex;
             flex-direction: column;
-            gap: 6px;
+            gap: 8px;
+            border-top: 1px solid #f1f0ee;
+            padding-top: 14px;
         }
 
-        /* Formula Box */
+        /* Formula Card */
         .formula-card {
-            background: #f8fafc;
-            border: 1px solid var(--border);
-            border-radius: var(--radius-md);
-            padding: 14px 18px;
-            margin-bottom: 24px;
+            background: #fafaf9;
+            border: 1px solid var(--luxury-border);
+            border-radius: 6px;
+            padding: 16px 20px;
+            margin-bottom: 28px;
             font-size: 13px;
         }
 
         .formula-code {
             font-family: ui-monospace, Menlo, Monaco, monospace;
             font-size: 12px;
-            color: #0f172a;
+            color: var(--luxury-dark);
             background: #ffffff;
-            border: 1px solid var(--border);
-            padding: 8px 12px;
-            border-radius: var(--radius-sm);
-            margin-top: 6px;
+            border: 1px solid var(--luxury-border);
+            padding: 10px 14px;
+            border-radius: 4px;
+            margin-top: 8px;
             display: block;
         }
 
-        /* Simplified Test Sandbox */
+        /* Sandbox */
         .sandbox-box {
-            background: #f1f5f9;
-            border: 1px solid #cbd5e1;
-            border-radius: var(--radius-md);
-            padding: 18px;
+            background: #f7f6f4;
+            border: 1px solid #ded9d1;
+            border-radius: 6px;
+            padding: 20px;
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 14px;
             align-items: center;
             justify-content: space-between;
         }
@@ -393,40 +424,35 @@
             align-items: center;
             gap: 12px;
             flex: 1;
-            min-width: 280px;
+            min-width: 300px;
         }
 
-        .sandbox-actions {
-            display: flex;
-            gap: 8px;
-        }
-
-        .btn-action-simple {
-            font-size: 13px;
+        .btn-action-serif {
+            font-size: 12px;
             font-weight: 600;
-            padding: 10px 16px;
-            border-radius: var(--radius-sm);
-            border: none;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 11px 18px;
+            border-radius: 4px;
+            border: 1px solid var(--luxury-dark);
             cursor: pointer;
-            transition: all 0.15s;
+            transition: all 0.2s;
         }
 
-        .btn-issue { background: var(--primary); color: white; }
-        .btn-issue:hover { background: var(--primary-hover); }
-        .btn-secondary { background: white; border: 1px solid var(--border); color: var(--text-dark); }
-        .btn-secondary:hover { background: #f8fafc; border-color: #cbd5e1; }
-        .btn-warn { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
-        .btn-warn:hover { background: #fde68a; }
+        .btn-issue { background: var(--luxury-dark); color: white; }
+        .btn-issue:hover { background: #2b2d35; }
+        .btn-outline { background: white; color: var(--luxury-dark); }
+        .btn-outline:hover { background: #f1f0ee; }
 
-        /* Status & Timeline Section */
+        /* Status & Timeline */
         .status-card {
             display: none;
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 24px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
-            margin-bottom: 28px;
+            background: var(--luxury-card);
+            border: 1px solid var(--luxury-border);
+            border-radius: var(--radius-md);
+            padding: 32px 40px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.02);
+            margin-bottom: 32px;
         }
 
         .status-badge {
@@ -434,6 +460,7 @@
             padding: 4px 10px;
             font-size: 11px;
             font-weight: 700;
+            letter-spacing: 0.1em;
             border-radius: 4px;
             text-transform: uppercase;
         }
@@ -446,12 +473,12 @@
         .status-FAILED { background: #fee2e2; color: #991b1b; }
 
         .timeline-clean {
-            border-left: 2px solid var(--border);
-            padding-left: 16px;
+            border-left: 2px solid var(--luxury-border);
+            padding-left: 18px;
             margin-left: 8px;
             display: flex;
             flex-direction: column;
-            gap: 14px;
+            gap: 16px;
             margin-top: 14px;
         }
 
@@ -462,51 +489,64 @@
         .timeline-node::before {
             content: '';
             position: absolute;
-            left: -21px;
+            left: -24px;
             top: 5px;
-            width: 8px;
-            height: 8px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
-            background: var(--primary);
+            background: var(--luxury-dark);
+            border: 2px solid #ffffff;
         }
 
-        /* Simplified Table */
+        /* Requests Table */
         .table-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 24px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+            background: var(--luxury-card);
+            border: 1px solid var(--luxury-border);
+            border-radius: var(--radius-md);
+            padding: 32px 40px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.02);
+        }
+
+        .table-title-serif {
+            font-family: var(--font-display);
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--luxury-dark);
         }
 
         .simple-table {
             width: 100%;
             border-collapse: collapse;
             font-size: 13px;
-            margin-top: 14px;
+            margin-top: 16px;
         }
 
         .simple-table th {
             text-align: left;
-            padding: 10px 12px;
-            background: #f8fafc;
-            color: var(--text-muted);
+            padding: 12px 14px;
+            background: #fafaf9;
+            color: var(--luxury-muted);
             font-weight: 600;
-            border-bottom: 1px solid var(--border);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-size: 11px;
+            border-bottom: 1px solid var(--luxury-border);
         }
 
         .simple-table td {
-            padding: 12px;
-            border-bottom: 1px solid #f1f5f9;
+            padding: 14px;
+            border-bottom: 1px solid #f3f2ef;
         }
 
         .simple-table tr:hover {
-            background: #f8fafc;
+            background: #fafaf9;
         }
 
         @media (max-width: 768px) {
+            .display-title { font-size: 32px; }
             .two-cols, .four-cols, .plans-grid { grid-template-columns: 1fr; }
             .sandbox-box { flex-direction: column; align-items: stretch; }
+            .plans-topbar { flex-direction: column; align-items: flex-start; gap: 14px; }
         }
     </style>
 </head>
@@ -515,22 +555,26 @@
     <!-- Header -->
     <header>
         <a href="/" class="brand-link">
-            <div class="brand-logo-icon">🛡️</div>
-            <div class="brand-title">Trippers<span>Shield</span></div>
+            <div class="brand-logo-text">TRIPPERSSHIELD</div>
+            <span class="header-tagline">Travel Insurance</span>
         </a>
-        <div class="header-actions">
-            <button class="header-btn" onclick="scrollToTable()">Requests Log</button>
+        <div>
+            <button class="header-btn" onclick="scrollToTable()">Operations Log</button>
         </div>
     </header>
 
     <div class="page-container">
 
-        <!-- Policy Intake Form Card -->
-        <section class="main-card">
-            <div class="card-header-simple">
-                <h1>Travel Insurance Purchase Intake</h1>
-                <p>Fill out the travel details below to calculate deterministic premium and issue policy.</p>
-            </div>
+        <!-- Editorial Hero & Intake Form -->
+        <section class="editorial-card">
+            <span class="eyebrow-text">TrippersShield • Fictional Distribution Engine</span>
+            <h1 class="display-title">
+                Travel Insurance,<br>
+                <em>safely orchestrated.</em>
+            </h1>
+            <p class="display-desc">
+                Deterministic policy pricing, concurrency-safe duplicate prevention, and automated mock insurer reconciliation built for campus engineering assessment.
+            </p>
 
             <div class="form-grid">
                 <!-- Destination -->
@@ -560,34 +604,36 @@
                     </div>
                 </div>
 
-                <!-- Traveller & Agent Details -->
+                <!-- Traveller & Request Identification -->
                 <div class="info-box">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-                        <span style="font-size: 13px; font-weight: 600;">Customer & Request Identification</span>
-                        <span style="font-size: 12px; color: var(--primary); cursor: pointer;" onclick="randomizeRequestId()">⚡ New Client Request ID</span>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+                        <span class="field-label" style="margin-bottom: 0;">Identification & Agent Credentials</span>
+                        <span style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #8c7851; cursor: pointer; font-weight: 700;" onclick="randomizeRequestId()">
+                            ⚡ Generate New Request ID
+                        </span>
                     </div>
                     <div class="four-cols">
                         <div>
-                            <label class="field-label" style="font-size: 12px; font-weight: 500;">Customer Name</label>
+                            <label class="field-label" style="font-size: 11px;">Customer Name</label>
                             <input type="text" id="customerName" class="text-input" value="Sample Customer">
                         </div>
                         <div>
-                            <label class="field-label" style="font-size: 12px; font-weight: 500;">Date of Birth</label>
+                            <label class="field-label" style="font-size: 11px;">Date of Birth</label>
                             <input type="date" id="dob" class="text-input" value="1998-04-10" onchange="calculateLive()">
                         </div>
                         <div>
-                            <label class="field-label" style="font-size: 12px; font-weight: 500;">Agent ID</label>
+                            <label class="field-label" style="font-size: 11px;">Agent ID</label>
                             <input type="text" id="agentId" class="text-input" value="AGENT-17">
                         </div>
                         <div>
-                            <label class="field-label" style="font-size: 12px; font-weight: 500;">Client Request ID</label>
+                            <label class="field-label" style="font-size: 11px;">Client Request ID</label>
                             <input type="text" id="clientRequestId" class="text-input" value="AGT-2026-0001">
                         </div>
                     </div>
                 </div>
 
-                <button type="button" class="btn-primary-large" onclick="showPlans()">
-                    View Plans & Calculate Premium →
+                <button type="button" class="btn-luxury-action" onclick="showPlans()">
+                    Calculate Premium & Explore Plans →
                 </button>
             </div>
         </section>
@@ -596,11 +642,11 @@
         <section class="plans-card" id="plansCard">
             <div class="plans-topbar">
                 <div>
-                    <h2 style="font-size: 18px; font-weight: 700;">Compare Plans</h2>
-                    <p style="font-size: 13px; color: var(--text-muted);" id="tripSummarySubtitle">5 Days • International • Age 28</p>
+                    <h2 class="plans-title-serif">Coverage Plans</h2>
+                    <p style="font-size: 13px; color: var(--luxury-muted);" id="tripSummarySubtitle">5 Days • International • Age 28</p>
                 </div>
-                <div style="display: flex; align-items: center; gap: 8px;">
-                    <span style="font-size: 12px; font-weight: 600; color: var(--text-muted);">Sum Insured:</span>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--luxury-muted);">Sum Insured:</span>
                     <div class="sum-buttons">
                         <button type="button" class="sum-btn" onclick="selectSumInsured(100000)">₹1,00,000</button>
                         <button type="button" class="sum-btn active" onclick="selectSumInsured(300000)">₹3,00,000</button>
@@ -612,34 +658,34 @@
             <!-- Plans Grid -->
             <div class="plans-grid">
                 <div class="plan-item" id="planBoxBASIC" onclick="selectPlan('BASIC')">
-                    <div class="plan-item-name">BASIC</div>
-                    <div class="plan-item-rate">Base ₹12/day</div>
+                    <div class="plan-item-name">Basic</div>
+                    <div class="plan-item-rate">₹12 per day base</div>
                     <div class="plan-item-price" id="priceBASIC">₹135.00</div>
                     <ul class="plan-item-features">
-                        <li>• Emergency Medical Evacuation</li>
-                        <li>• Baggage Delay/Loss Cover</li>
+                        <li>• Emergency Inpatient Hospitalisation</li>
+                        <li>• Baggage Delay & Loss Protection</li>
                     </ul>
                 </div>
 
                 <div class="plan-item selected" id="planBoxPLUS" onclick="selectPlan('PLUS')">
-                    <span class="plan-tag">Popular</span>
-                    <div class="plan-item-name">PLUS</div>
-                    <div class="plan-item-rate">Base ₹20/day</div>
+                    <span class="plan-tag">Recommended</span>
+                    <div class="plan-item-name">Plus</div>
+                    <div class="plan-item-rate">₹20 per day base</div>
                     <div class="plan-item-price" id="pricePLUS">₹225.00</div>
                     <ul class="plan-item-features">
-                        <li>• All Basic Plan Benefits</li>
-                        <li>• Trip Cancellation & Curtailment</li>
-                        <li>• Cashless Hospitalisation</li>
+                        <li>• All Basic Plan Coverages</li>
+                        <li>• Trip Interruption & Flight Cancellation</li>
+                        <li>• Worldwide Cashless OPD Network</li>
                     </ul>
                 </div>
 
                 <div class="plan-item" id="planBoxPREMIUM" onclick="selectPlan('PREMIUM')">
-                    <div class="plan-item-name">PREMIUM</div>
-                    <div class="plan-item-rate">Base ₹30/day</div>
+                    <div class="plan-item-name">Premium</div>
+                    <div class="plan-item-rate">₹30 per day base</div>
                     <div class="plan-item-price" id="pricePREMIUM">₹337.50</div>
                     <ul class="plan-item-features">
-                        <li>• All Plus Plan Benefits</li>
-                        <li>• Adventure Sports & Personal Liability</li>
+                        <li>• All Plus Plan Coverages</li>
+                        <li>• High-Altitude Sports & Personal Liability</li>
                         <li>• Zero Claim Deductibles</li>
                     </ul>
                 </div>
@@ -647,17 +693,19 @@
 
             <!-- Pricing Breakdown -->
             <div class="formula-card">
-                <div style="font-weight: 600; color: var(--text-dark);">Deterministic Pricing Breakdown</div>
+                <div style="font-weight: 600; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #8c7851;">
+                    Deterministic Pricing Snapshot
+                </div>
                 <code class="formula-code" id="formulaDisplay">
-                    premium = base_daily_rate(₹20) × travel_days(5) × age_multiplier(1.00) × destination_multiplier(1.80) × coverage_multiplier(1.25) = ₹225.00
+                    premium = base_rate(₹20) × travel_days(5) × age_multiplier(1.00) × destination_multiplier(1.80) × coverage_multiplier(1.25) = ₹225.00
                 </code>
             </div>
 
             <!-- Mock Insurer Testing Sandbox -->
             <div class="sandbox-box">
                 <div class="sandbox-left">
-                    <span style="font-size: 13px; font-weight: 600; white-space: nowrap;">Insurer Scenario:</span>
-                    <select id="scenarioSelect" class="text-input" style="padding: 8px 12px; font-size: 13px;">
+                    <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap;">Scenario:</span>
+                    <select id="scenarioSelect" class="text-input" style="padding: 9px 12px; font-size: 13px;">
                         <option value="SUCCESS">🟢 SUCCESS (Issue immediately)</option>
                         <option value="TEMPORARY_FAILURE">🔴 TEMPORARY_FAILURE (503 retriable)</option>
                         <option value="TIMEOUT_AFTER_ISSUE">🟡 TIMEOUT_AFTER_ISSUE (Requires reconcile)</option>
@@ -666,36 +714,36 @@
                     </select>
                 </div>
 
-                <div class="sandbox-actions">
-                    <button type="button" class="btn-action-simple btn-issue" id="btnSubmit" onclick="runIntakeAndSubmit()">Submit & Issue</button>
-                    <button type="button" class="btn-action-simple btn-secondary" onclick="simulateDuplicateIntake()">Test Duplicate</button>
-                    <button type="button" class="btn-action-simple btn-warn" onclick="runReconciliation()">Reconcile</button>
+                <div style="display: flex; gap: 8px;">
+                    <button type="button" class="btn-action-serif btn-issue" id="btnSubmit" onclick="runIntakeAndSubmit()">Submit & Issue</button>
+                    <button type="button" class="btn-action-serif btn-outline" onclick="simulateDuplicateIntake()">Test Duplicate</button>
+                    <button type="button" class="btn-action-serif btn-outline" onclick="runReconciliation()">Reconcile</button>
                 </div>
             </div>
         </section>
 
         <!-- Status & Audit Trail Card -->
         <section class="status-card" id="statusCard">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--luxury-border);">
                 <div>
-                    <span style="font-size: 12px; color: var(--text-muted); font-weight: 600;">STATUS:</span>
+                    <span style="font-size: 11px; color: var(--luxury-muted); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">STATUS:</span>
                     <span class="status-badge status-VALIDATED" id="statusBadge">VALIDATED</span>
                     <span id="activeReqText" style="margin-left: 10px; font-size: 13px; font-weight: 600;"></span>
                 </div>
-                <div style="display: flex; gap: 14px; font-size: 13px;">
-                    <div id="policyNumberText" style="font-weight: 600; color: #166534;"></div>
-                    <div id="providerRefText" style="color: var(--text-muted);"></div>
-                    <button class="header-btn" style="padding: 4px 8px; font-size: 11px;" onclick="refreshActivePolicy()">↻ Refresh</button>
+                <div style="display: flex; gap: 16px; font-size: 13px;">
+                    <div id="policyNumberText" style="font-weight: 700; color: #166534;"></div>
+                    <div id="providerRefText" style="color: var(--luxury-muted);"></div>
+                    <button class="header-btn" style="padding: 4px 10px; font-size: 11px;" onclick="refreshActivePolicy()">↻ Refresh</button>
                 </div>
             </div>
 
             <div class="two-cols">
                 <div>
-                    <div style="font-size: 13px; font-weight: 600; margin-bottom: 8px;">State Transition History</div>
+                    <div class="field-label">State Transition History</div>
                     <div class="timeline-clean" id="timelineContainer"></div>
                 </div>
                 <div>
-                    <div style="font-size: 13px; font-weight: 600; margin-bottom: 8px;">Issuance Attempts</div>
+                    <div class="field-label">Issuance Attempts & Idempotency</div>
                     <div id="attemptsContainer" style="display: flex; flex-direction: column; gap: 8px;"></div>
                 </div>
             </div>
@@ -703,13 +751,13 @@
 
         <!-- Requests Log Table -->
         <section class="table-card" id="requestsTableSection">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 18px;">
                 <div>
-                    <h3 style="font-size: 16px; font-weight: 700;">Policy Requests Log</h3>
-                    <p style="font-size: 12px; color: var(--text-muted);">All persisted policy requests in the database</p>
+                    <h3 class="table-title-serif">Policy Requests Registry</h3>
+                    <p style="font-size: 13px; color: var(--luxury-muted);">Persisted policy purchase records with audit trails and unique constraints</p>
                 </div>
                 <div style="display: flex; gap: 8px;">
-                    <select id="filterStatus" class="text-input" style="padding: 6px 10px; font-size: 12px; width: auto;" onchange="loadRequestsTable()">
+                    <select id="filterStatus" class="text-input" style="padding: 7px 12px; font-size: 12px; width: auto;" onchange="loadRequestsTable()">
                         <option value="">All Statuses</option>
                         <option value="RECEIVED">RECEIVED</option>
                         <option value="VALIDATED">VALIDATED</option>
@@ -719,7 +767,7 @@
                         <option value="FAILED">FAILED</option>
                         <option value="NEEDS_RECONCILIATION">NEEDS_RECONCILIATION</option>
                     </select>
-                    <button class="header-btn" style="padding: 6px 12px; font-size: 12px;" onclick="loadRequestsTable()">↻</button>
+                    <button class="header-btn" style="padding: 7px 14px; font-size: 12px;" onclick="loadRequestsTable()">↻</button>
                 </div>
             </div>
 
@@ -740,7 +788,7 @@
                         </tr>
                     </thead>
                     <tbody id="requestsTableBody">
-                        <tr><td colspan="10" style="text-align: center; color: var(--text-muted); padding: 20px;">Loading...</td></tr>
+                        <tr><td colspan="10" style="text-align: center; color: var(--luxury-muted); padding: 20px;">Loading...</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -964,7 +1012,7 @@
                 item.className = 'timeline-node';
                 item.innerHTML = `
                     <div style="font-weight: 600; font-size: 13px;">${h.from_state ? h.from_state + ' → ' : ''}${h.to_state}</div>
-                    <div style="font-size: 12px; color: var(--text-muted);">${h.reason || ''}</div>
+                    <div style="font-size: 12px; color: var(--luxury-muted);">${h.reason || ''}</div>
                     <div style="font-size: 11px; color: #94a3b8;">${new Date(h.created_at).toLocaleTimeString()}</div>
                 `;
                 tl.appendChild(item);
@@ -974,10 +1022,10 @@
             att.innerHTML = '';
             (p.attempts || []).forEach(a => {
                 const box = document.createElement('div');
-                box.style = 'padding: 8px 12px; background: #f8fafc; border: 1px solid var(--border); border-radius: 6px; font-size: 12px;';
+                box.style = 'padding: 8px 12px; background: #fafaf9; border: 1px solid var(--luxury-border); border-radius: 4px; font-size: 12px;';
                 box.innerHTML = `
                     <div style="font-weight: 600;">Attempt #${a.attempt_number} • ${a.status} (${a.http_status || 'N/A'})</div>
-                    <div style="font-family: monospace; font-size: 11px; color: var(--text-muted);">${a.idempotency_key}</div>
+                    <div style="font-family: monospace; font-size: 11px; color: var(--luxury-muted);">${a.idempotency_key}</div>
                     ${a.error_message ? `<div style="color: #991b1b; font-size: 11px;">${a.error_message}</div>` : ''}
                 `;
                 att.appendChild(box);
@@ -994,7 +1042,7 @@
                 tbody.innerHTML = '';
 
                 if (!json.data || json.data.length === 0) {
-                    tbody.innerHTML = '<tr><td colspan="10" style="text-align: center; padding: 18px; color: var(--text-muted);">No records found.</td></tr>';
+                    tbody.innerHTML = '<tr><td colspan="10" style="text-align: center; padding: 18px; color: var(--luxury-muted);">No records found.</td></tr>';
                     return;
                 }
 
